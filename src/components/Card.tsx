@@ -58,7 +58,7 @@ const data = [
 
 export const Card = () => {
     return (
-        <div className="flex flex-wrap justify-center gap-6 p-5">
+        <a href='/rezultate' className="flex flex-wrap justify-center gap-6 p-5 cursor-pointer">
             {data.map((item, index) => (
                 <div key={index} 
                     className="max-w-sm w-full flex flex-col border bg-gradient-to-t from-gray-600 to-fuchsia-950 border-gray-200 rounded-lg shadow min-h-[400px] transition-transform duration-300 hover:scale-105">
@@ -75,7 +75,7 @@ export const Card = () => {
                         </ul>
                     </div>
                     <div className="mt-auto flex justify-end p-3">
-                        <a href="/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white border border-white rounded-lg hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        <a href="/rezultate" className="inline-flex items-center font-medium text-white border border-white text-sm py-2 px-4 rounded-3xl hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
                             Vezi rezultate pre/post-operator
                             <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -84,6 +84,6 @@ export const Card = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </a>
     );
 };

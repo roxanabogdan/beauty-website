@@ -127,7 +127,7 @@ export const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="w-full bg-gradient-to-tr from-gray-600 to-fuchsia-950 border-gray-200 text-white py-2 px-4 rounded-xl hover:bg-fuchsia-900 transition duration-200"
+        className="w-full bg-gradient-to-tr from-gray-600 to-fuchsia-950 border-gray-200 text-white text-lg py-4 px-6 rounded-3xl hover:bg-fuchsia-900 transition duration-200"
       >
         Programează-te
       </button>

@@ -10,7 +10,7 @@ export const ContactCard = () => {
         <div className="bg-fuchsia-950 text-white p-4 shadow-lg rounded-lg">
         <div className='flex flex-col'>
             <div className='flex flex-wrap justify-between'>
-                <h2 className="text-xl font-semibold pb-2">Contacteaza-ne!</h2>
+                <h2 className="text-2xl font-semibold pb-2">Contacteaza-ne!</h2>
                 <div className="flex gap-4 pt-2]] pb-2">
                 <Link to="https://www.facebook.com/profile.php?id=100090671270044">
                     <Icon icon="facebook" />
@@ -32,7 +32,6 @@ export const ContactCard = () => {
             <p>
             <strong>Email:</strong> info@example.com
             </p>
-           
         </div>
 
       <div className='flex flex-col mt-4'>
