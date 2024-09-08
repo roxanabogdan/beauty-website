@@ -6,7 +6,7 @@ export const Rating = ({ rating = 4.5, totalReviews = 20, reviewLink = "#" }) =>
     const emptyStars = 5 - fullStars - halfStar;
 
     return (
-        <div className="flex items-center">
+        <div className="flex flex-wrap  justify-center w-full items-center p-5">
             <div> {rating}/5 </div>
             {[...Array(fullStars)].map((_, index) => (
                 <svg key={`full-${index}`} className="w-4 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">

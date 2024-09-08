@@ -6,12 +6,16 @@ import { Footer } from '../components/Footer';
 import { Card } from "../components/Card";
 import { ContactCard } from '../components/Contact';
 import { Rating } from "../components/Rating";
+import {About} from '../components/About';
+import { Carousel } from '../components/Carousel';
+import minimalBg from '../images/minimalBg';
 
 const Homopage = () => {
-  return <div className="h-full font-roboto">
+  return <div className="h-full font-merriweather bg-bgimage">
     <Header/>
+    <Carousel/>
     <div className="flex flex-col justify-center pl-10 pr-10">
-      <h1 className="text-3xl font-extrabold tracking-tight text-center p-4">
+      <h1 className="text-3xl font-extrabold tracking-tight text-center p-4 md:text-3xl sm:text-xs">
         Arta frumuseții la un alt nivel!
       </h1>
       <p className="text-lg font-normal text-center text-gray-500"> 
@@ -20,6 +24,7 @@ const Homopage = () => {
       <p className="text-sm font-normal text-gray-500 text-center pt-4">
       În clinică noastră, sunt utilizate doar tehnici si produse de ultimă generație. Procedurile sunt actualizate constant datorită participării active a echipei noastre de medici la cele mai noi conferințe si cursuri. Oferim o gamă variată de servicii chirurgicale plastice si estetice minim invazive cu timp de recuperare cât mai scurt.
       </p>
+      <Rating rating={5} totalReviews={45} reviewLink="https://www.google.com/search?sa=X&sca_esv=0d2152f041f38e62&tbm=lcl&sxsrf=ADLYWIK3tYIVIthfo8oFLxH8LsS0Z_fV6g:1725207374553&q=Pure+Aesthetic+Clinic+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTOwMDQxNTI3MjMzMbMwtDQ02MDI-IpRLqC0KFXBMbW4JCO1JDNZwTknMw9IBaUmp-ZVZWYuYiWgAAAuj_v7XAAAAA&rldimm=5608145272664681910&hl=ro-RO&ved=2ahUKEwjNkuWlkqKIAxW7g_0HHdApKToQ9fQKegQINhAF&biw=1860&bih=966&dpr=1#lkt=LocalPoiReviews" />
     </div>
     <div className="gap-5">
      
@@ -31,8 +36,7 @@ const Homopage = () => {
       <StatisticsCard/>
       <div className="flex flex-wrap justify-between">
       <ContactCard/>
-
-      <Rating rating={5} totalReviews={45} reviewLink="https://www.google.com/search?sa=X&sca_esv=0d2152f041f38e62&tbm=lcl&sxsrf=ADLYWIK3tYIVIthfo8oFLxH8LsS0Z_fV6g:1725207374553&q=Pure+Aesthetic+Clinic+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NTOwMDQxNTI3MjMzMbMwtDQ02MDI-IpRLqC0KFXBMbW4JCO1JDNZwTknMw9IBaUmp-ZVZWYuYiWgAAAuj_v7XAAAAA&rldimm=5608145272664681910&hl=ro-RO&ved=2ahUKEwjNkuWlkqKIAxW7g_0HHdApKToQ9fQKegQINhAF&biw=1860&bih=966&dpr=1#lkt=LocalPoiReviews" />
+     
       </div>
      
     </div>

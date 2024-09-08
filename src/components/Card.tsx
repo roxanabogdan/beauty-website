@@ -61,14 +61,14 @@ export const Card = () => {
         <div className="flex flex-wrap justify-center gap-6 p-5">
             {data.map((item, index) => (
                 <div key={index} 
-                    className="max-w-sm w-full flex flex-col border bg-fuchsia-950 border-gray-200 rounded-lg shadow min-h-[400px] transition-transform duration-300 hover:scale-105">
+                    className="max-w-sm w-full flex flex-col border bg-gradient-to-t from-gray-600 to-fuchsia-950 border-gray-200 rounded-lg shadow min-h-[400px] transition-transform duration-300 hover:scale-105">
                     <div className="p-3">
                         <div className="bg-[url('../images/botox.jpg')] bg-cover bg-center h-48 w-full rounded-md mb-3" alt="" />
                         
-                        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-200 dark:text-white">
                             {item.title}
                         </h5>
-                        <ul className="mb-3 font-normal text-gray-700 dark:text-gray-400 list-disc pl-5 flex-grow">
+                        <ul className="mb-3 font-normal text-white  list-disc pl-5 flex-grow">
                             {item.list.map((listItem, listIndex) => (
                                 <li key={listIndex}>{listItem}</li>
                             ))}

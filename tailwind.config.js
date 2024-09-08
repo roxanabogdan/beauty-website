@@ -6,8 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'bgimage': "url('/images/greybg.jpeg')",
+      },
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
+        'merriweather': ['Merriweather'],
       },
       keyframes: {
         shake: {
@@ -18,6 +21,9 @@ module.exports = {
       },
       animation: {
         shake: 'shake 0.5s ease-in-out infinite',
+      },
+      screens: {
+        'xs': '250px',
       },
     },
   },
