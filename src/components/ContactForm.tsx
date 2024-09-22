@@ -1,6 +1,4 @@
 import React, { useState, useRef } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import emailjs from '@emailjs/browser';
 
 //@SMTPClient1
@@ -10,13 +8,13 @@ export const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
-    date: new Date(),
+    date: new Date().toISOString().slice(0, 16), // Default to current date and time
     description: "",
   });
 
-  const form = useRef(); 
+  const form = useRef();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -24,26 +22,10 @@ export const ContactForm = () => {
     }));
   };
 
-  const handleDateChange = (date: Date) => {
-
-       // Format the date before sending
-       const formattedDate = formData.date.toLocaleString('en-US', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
-
-    setFormData((prevData) => ({
-      ...prevData,
-      formattedDate,
-    }));
-  };
-
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      try {
+    console.log('form.current', e);
+    try {
       await emailjs.sendForm(
         'service_bltxcse', 
         'template_rc4v1cp', 
@@ -56,7 +38,7 @@ export const ContactForm = () => {
         name: "",
         email: "",
         phone: "",
-        date: new Date(),
+        date: new Date().toISOString().slice(0, 16), // Reset date to current
         description: "",
       });
     } catch (error) {
@@ -67,9 +49,9 @@ export const ContactForm = () => {
 
   return (
     <form ref={form} onSubmit={handleSubmit} className="max-w-md mx-auto text-sm font-roboto p-4 bg-white shadow-md rounded-lg">
-    <label htmlFor="form" className="block text-gray-700 mb-2">
-    Completează formularul în vederea programării unui consult sau tratament și noi te vom contacta telefonic pentru confirmare. 
-    </label>
+      <label htmlFor="form" className="block text-gray-700 mb-2">
+        Completează formularul în vederea programării unui consult sau tratament și noi te vom contacta telefonic pentru confirmare.
+      </label>
       <div className="mb-4">
         <input
           type="text"
@@ -107,12 +89,15 @@ export const ContactForm = () => {
         />
       </div>
       <div className="mb-4">
-     <DatePicker
-              selected={formData.date}
-              onChange={handleDateChange}
-              minDate={new Date()} // Prevent selecting past dates
-              className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring"
-            />
+        <input
+          type="datetime-local"
+          id="date"
+          name="date"
+          value={formData.date}
+          min={new Date().toISOString().slice(0, 16)} // Prevent past dates
+          onChange={handleChange}
+          className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring"
+        />
       </div>
       <div className="mb-4">
         <label htmlFor="description" className="block text-gray-700 mb-2">Alte precizări:</label>
@@ -134,4 +119,3 @@ export const ContactForm = () => {
     </form>
   );
 };
-

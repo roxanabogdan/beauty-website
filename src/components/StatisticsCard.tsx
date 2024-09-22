@@ -12,7 +12,7 @@ export const StatisticsCard = () => {
     const experienceTarget = 7;
     const patientsTarget = 50;
     const doctorsTarget = 2;
-    const proceduresTarget = 40;
+    const proceduresTarget = 80;
 
     const incrementCounter = (current, target, setter) => {
       if (current < target) {

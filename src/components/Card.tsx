@@ -1,8 +1,14 @@
 import React from "react";
+import botox from '../images/botox.jpg';
+import mamar from '../images/mamar.jpg';
+import lifting from '../images/lifting.webp';
+import silueta from '../images/silueta.jpg';
 
 const data = [
     {
         title: 'Proceduri estetice minim invazive',
+        route: 'proceduri-estetice',
+        image: botox,
         list: [
             'Injectare Toxina Botulinica full',
             'Injectare Acid Hialuronic',
@@ -18,6 +24,8 @@ const data = [
     },
     {
         title: 'Chirurgia sânului',
+        route:'chirurgia-sanului',
+        image: mamar,
         list: [
             'Mamopexie (ridicare/lifting sâni)',
             'Mamoreducție (ridicare/lifting sâni cu micșorare)',
@@ -28,6 +36,8 @@ const data = [
     },
     {
         title: 'Blefaroplastie',
+        route: 'blefaroplastie',
+        image: lifting,
         list: [
             'Excizie formatiuni tumorale',
             'Excizie formatiuni tumorale+biopsie',
@@ -44,6 +54,8 @@ const data = [
     },
     {
         title: 'Chirurgia siluetei',
+        route: 'chirurgia-siluetei',
+        image: silueta,
         list: [
             'Abdominoplastie',
             'Mini-abdominoplastie',
@@ -58,13 +70,16 @@ const data = [
 
 export const Card = () => {
     return (
-        <a href='/rezultate' className="flex flex-wrap justify-center gap-6 p-5 cursor-pointer">
+        <div className="flex flex-wrap justify-center gap-6 p-5 cursor-pointer">
             {data.map((item, index) => (
-                <div key={index} 
+                <a key={index}  href={`/rezultate?galerie=${item.route}`}
                     className="max-w-sm w-full flex flex-col border bg-gradient-to-t from-gray-600 to-fuchsia-950 border-gray-200 rounded-lg shadow min-h-[400px] transition-transform duration-300 hover:scale-105">
                     <div className="p-3">
-                        <div className="bg-[url('../images/botox.jpg')] bg-cover bg-center h-48 w-full rounded-md mb-3" alt="" />
-                        
+                        <div
+                            style={{ backgroundImage: `url(${item.image})` }}
+                            className="bg-cover bg-center h-48 w-full rounded-md mb-3"
+                            alt={item.title} // Use title for alt text
+                        />                        
                         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-200 dark:text-white">
                             {item.title}
                         </h5>
@@ -75,15 +90,15 @@ export const Card = () => {
                         </ul>
                     </div>
                     <div className="mt-auto flex justify-end p-3">
-                        <a href="/rezultate" className="inline-flex items-center font-medium text-white border border-white text-sm py-2 px-4 rounded-3xl hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        <div className="inline-flex items-center font-medium text-white border border-white text-sm py-2 px-4 rounded-3xl hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none">
                             Vezi rezultate pre/post-operator
                             <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
             ))}
-        </a>
+        </div>
     );
 };

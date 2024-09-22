@@ -65,9 +65,9 @@ export const Carousel = () => {
                 data-carousel-prev
                 onClick={prevSlide}
             >
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full group-hover:bg-grey-500">
+                <span className="inline-flex items-center justify-center  w-10 h-10 rounded-full group-hover:bg-grey-500">
                     <svg
-                        className="w-4 h-4 text-white"
+                        className="w-4 h-4 text-gray-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -85,9 +85,9 @@ export const Carousel = () => {
                 data-carousel-next
                 onClick={nextSlide}
             >
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full group-hover:bg-grey-500">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full pr-3 group-hover:bg-grey-500">
                     <svg
-                        className="w-4 h-4 text-white"
+                        className="w-4 h-4  text-gray-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

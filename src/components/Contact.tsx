@@ -6,7 +6,7 @@ import { Icon } from "./Icon";
 
 export const ContactCard = () => {
   return (
-    <div className="flex flex-wrap justify-center w-full p-4">
+    <div className="flex flex-wrap justify-center w-full p-4 mb-16">
         <div className="bg-fuchsia-950 text-white p-4 shadow-lg rounded-lg">
         <div className='flex flex-col'>
             <div className='flex flex-wrap justify-between'>
@@ -27,7 +27,7 @@ export const ContactCard = () => {
             <strong>Programul:</strong> Luni - Vineri, 13 - 20
             </p>
             <p className="mb-1">
-            <strong>Telefon:</strong> 0727 784 478
+            <strong>Telefon:</strong> <a href='tel:+0727 784 478'>0727 784 478</a>
             </p>
             <p>
             <strong>Email:</strong> info@example.com

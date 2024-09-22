@@ -14,13 +14,16 @@ export const Header = ({wHomepage = true, wLogo = false}) => {
                     }
                 </div>
                 <div className="flex flex-wrap gap-4 items-end p-4 whitespace-nowrap md:text-sm xs:text-xs">
-                    <Link to='/rezultate'>
-                        <span className="hover:text-gray-400">GALERIE FOTO</span> 
+                    <Link to='/rezultate?galerie=default'>
+                        <span className="hover:text-gray-400">GALERIE</span> 
                     </Link>
                     <Link to='/preturi'>
                     <span className="hover:text-gray-400">PRETURI</span> 
                     </Link>
-                    <Link to="tel:+40727 784 478">
+                    <Link to='/despre'>
+                    <span className="hover:text-gray-400">DESPRE</span> 
+                    </Link>
+                    <Link to="tel:+40727784478">
                     <strong> <span className="text-white">📞</span> 0727 784 478</strong> 
                     </Link>
                     <Link to="https://www.facebook.com/profile.php?id=100090671270044">
