@@ -5,11 +5,11 @@ import { Icon } from "./Icon";
 export const Footer = () => {
   return (
     <footer className="bg-fuchsia-950 text-white p-4">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <nav className="flex gap-4">
+      <div className="flex flex-row justify-between items-center">
+        <nav className="flex flex-wrap  gap-4">
           <p>Copyright PureAesthetic© 2024. All rights reserved.</p>
         </nav>
-        <div className="flex gap-4 mt-4 md:mt-0">
+        <div className="flex gap-4 mt-4 md:mt-0 xs:mt-0">
           <Link to="https://www.facebook.com/profile.php?id=100090671270044">
             <Icon icon="facebook" />
           </Link>

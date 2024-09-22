@@ -8,7 +8,7 @@ export const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
-    date: new Date().toISOString().slice(0, 16), // Default to current date and time
+    date: new Date().toISOString().slice(0, 16),
     description: "",
   });
 
@@ -38,7 +38,7 @@ export const ContactForm = () => {
         name: "",
         email: "",
         phone: "",
-        date: new Date().toISOString().slice(0, 16), // Reset date to current
+        date: new Date().toISOString().slice(0, 16),
         description: "",
       });
     } catch (error) {
@@ -94,7 +94,7 @@ export const ContactForm = () => {
           id="date"
           name="date"
           value={formData.date}
-          min={new Date().toISOString().slice(0, 16)} // Prevent past dates
+          min={new Date().toISOString().slice(0, 16)} 
           onChange={handleChange}
           className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring"
         />

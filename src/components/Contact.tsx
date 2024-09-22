@@ -30,7 +30,7 @@ export const ContactCard = () => {
             <strong>Telefon:</strong> <a href='tel:+0727 784 478'>0727 784 478</a>
             </p>
             <p>
-            <strong>Email:</strong> info@example.com
+            <strong>Email:</strong> drprodanmihaela@gmail.com
             </p>
         </div>
 

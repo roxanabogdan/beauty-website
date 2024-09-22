@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import miminalbg from '../images/minimal-bg.jpg'
 
 export const StatisticsCard = () => {
   const [experienceCount, setExperienceCount] = useState(0);
@@ -49,24 +50,26 @@ export const StatisticsCard = () => {
   }, [experienceCount, patientsCount, doctorsCount, proceduresCount]);
 
   return (
-    <div ref={statsRef} className="border border-gray-200 rounded-lg shadow m-20 sm:m-20 xs:m-4">
+    <div ref={statsRef} className="border bg-cover border-gray-200 rounded-lg shadow m-20 sm:m-20 xs:m-4"
+    style={{ backgroundImage: `url(${miminalbg})` }}
+    >
       <div className="p-4 rounded-lg md:p-8 " id="stats" role="tabpanel" aria-labelledby="stats-tab">
         <dl className="grid grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-4 sm:p-8">
           <div className="flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105">
             <dt className="mb-2 text-2xl sm:text-3xl font-extrabold">{experienceCount}+</dt>
-            <dd className="text-sm sm:text-base text-gray-500 text-center dark:text-gray-400">Ani de experiență</dd>
+            <dd className="text-sm sm:text-base text-gray-500 text-center">Ani de experiență</dd>
           </div>
           <div className="flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105">
             <dt className="mb-2 text-2xl sm:text-3xl font-extrabold">{patientsCount}+</dt>
-            <dd className="text-sm sm:text-base text-gray-500 text-center dark:text-gray-400">Pacienți mulțumiți</dd>
+            <dd className="text-sm sm:text-base text-gray-500 text-center">Pacienți mulțumiți</dd>
           </div>
           <div className="flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105">
             <dt className="mb-2 text-2xl sm:text-3xl font-extrabold">{doctorsCount}</dt>
-            <dd className="text-sm sm:text-base text-gray-500 text-center dark:text-gray-400">Medici cu experiență</dd>
+            <dd className="text-sm sm:text-base text-gray-500 text-center">Medici cu experiență</dd>
           </div>
           <div className="flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105">
             <dt className="mb-2 text-2xl sm:text-3xl font-extrabold">{proceduresCount}+</dt>
-            <dd className="text-sm sm:text-base text-gray-500 text-center dark:text-gray-400">Proceduri efectuate</dd>
+            <dd className="text-sm sm:text-base text-gray-500 text-center">Proceduri efectuate</dd>
           </div>
         </dl>
       </div>

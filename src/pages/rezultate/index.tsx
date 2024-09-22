@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Gallery } from "../../components/Gallery";
 import { Header } from "../../components/Header";
 import { Footer } from '../../components/Footer';
-import { title } from "process";
+import bgimage from '../../images/minimal-bg.jpg';
 
 const description = {
   'blefaroplastie': 'Blefaroplastia, cunoscută și sub denumirea de chirurgia pleoapelor, este o procedură estetică care vizează îmbunătățirea aspectului pleoapelor superioare și inferioare. Aceasta poate corecta excesul de piele, ridurile și pungile de sub ochi, oferind un aspect mai tânăr și odihnit. Intervenția este realizată prin îndepărtarea pielii și a grăsimii în exces, rezultând o conturare mai armonioasă a feței. Blefaroplastia nu doar că îmbunătățește estetica, ci poate și să contribuie la funcționalitatea pleoapelor, ajutând la îmbunătățirea câmpului vizual atunci când pielea lăsată interferează cu vederea. Recuperarea este relativ rapidă, iar rezultatele pot dura mulți ani, oferind pacienților un aspect revitalizat și o încredere sporită.',
@@ -69,7 +69,10 @@ const Results = () => {
   }, [queryParams, data]);
 
   return (
-    <div>
+    <div
+    className="min-h-screen font-merriweather bg-cover bg-center"
+    style={{ backgroundImage: `url(${bgimage})` }}
+    >
       <Header wLogo={true} />
       <h3 className="flex justify-center text-xl font-bold mb-4 xs:text-lg md:text-xl text-gray-600 animate-slideinleft">Rezultate pre/post operator</h3>
       <p className="flex justify-center text-xs text-center p-5 animate-slideinright">{description[galeryTitle]}</p>

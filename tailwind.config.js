@@ -6,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'bgimage': "url('/images/greybg.jpeg')",
-      },
       fontFamily: {
         'merriweather': ['Merriweather'],
       },

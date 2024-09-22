@@ -83,7 +83,7 @@ export const Card = () => {
                         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-200 dark:text-white">
                             {item.title}
                         </h5>
-                        <ul className="mb-3 font-normal text-white  list-disc pl-5 flex-grow">
+                        <ul className="mb-3 font-normal md:text-lg xs:text-sm text-white list-disc pl-5 flex-grow">
                             {item.list.map((listItem, listIndex) => (
                                 <li key={listIndex}>{listItem}</li>
                             ))}
