@@ -3,6 +3,9 @@ import botox from '../images/botox.jpg';
 import mamar from '../images/mamar.jpg';
 import lifting from '../images/lifting.webp';
 import silueta from '../images/silueta.jpg';
+import hand from '../images/hand.jpeg';
+import face from '../images/face.jpeg';
+import excizie from '../images/excizie.webp';
 
 const data = [
     {
@@ -39,16 +42,10 @@ const data = [
         route: 'blefaroplastie',
         image: lifting,
         list: [
-            'Excizie formatiuni tumorale',
-            'Excizie formatiuni tumorale+biopsie',
             'Blefaroplastie superioara',
             'Blefaroplastie inferioara',
-            'Mini facelift',
-            'Revizie cicatrici',
-            'Lifting buze',
-            'Lifting sprancene',
-            'Corectie lob auricular (bilateral)',
-            'Excizie lipom',
+            'Cantopexie (fox eyes)',
+            'Ptoza palpebrala',
             'Excizie formatiune tumorala cu lambou local',
         ]
     },
@@ -64,6 +61,54 @@ const data = [
             'Ginecomastie',
             'Lifting de brate',
             'Lifting de coapse ',
+        ]
+    },
+    {
+        title: 'Chirurgia fetei',
+        route: 'default',
+        image: face,
+        list: [
+            "Facelift deep plane",
+            "Mini facelift",
+            "Lifting buze",
+            "Lifting sprancene",
+            "Corectie lob auricular (bilateral)",
+            "Lipofilling full face cu grasime proprie cu anestezie locala",
+            "Lipofilling full face cu grasime proprie cu anestezie totala",
+            "Rinoplastie",
+            "Otoplastie cu anestezie totala",
+            "Otoplastie cu anestezie locala",
+            "Lipoaspiratie gusa cu anestezie locala",
+            "Lipoaspiratie gusa cu anestezie totala",
+            "Lifting gat"
+        ]
+    },
+    {
+        title: 'Chirurgia pielii si al Cancerului de piele',
+        route: 'default',
+        image: excizie,
+        list: [
+            "Excizie formatiune tumorala",
+            "Excizie formatiune tumorala + biopsie",
+            "Revizie cicatrici",
+            "Excizie lipom",
+            "Excizie formatiune tumorala cu lambou local",
+            "Excizie xantelasme",
+            "Suprimare fire de sutura",
+            "Pansament"
+        ]
+    },
+    {
+        title: 'Chirurgia mainii',
+        route: 'default',
+        image: hand,
+        list: [
+            'Sindrom de tunel carpian',
+            'Trigger finger / deget in resort',
+            '⁠Malett finger / deget in ciocan',
+            'Maladia Dupuytren',
+            'Sindrom de tunel cubital',
+            '⁠Chiste sinoviale',
         ]
     }
 ];
