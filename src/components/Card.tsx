@@ -1,17 +1,17 @@
 import React from "react";
-import botox from '../images/botox.jpg';
 import mamar from '../images/mamar.jpg';
 import lifting from '../images/lifting.webp';
 import silueta from '../images/silueta.jpg';
 import hand from '../images/hand.jpeg';
 import face from '../images/face.jpeg';
 import excizie from '../images/excizie.webp';
+import chirurgia from '../images/chirurgia-fetei.jpg';
 
 const data = [
     {
         title: 'Proceduri estetice minim invazive',
         route: 'proceduri-estetice',
-        image: botox,
+        image: face,
         list: [
             'Injectare Toxina Botulinica full',
             'Injectare Acid Hialuronic',
@@ -23,6 +23,7 @@ const data = [
             'Injectare cearcane cu Acid Hialuronic',
             'Injectare pometi cu Acid Hialuronic',
             'Injectare mandibula (jaw line)',
+            'Sculptra'
         ]
     },
     {
@@ -66,7 +67,7 @@ const data = [
     {
         title: 'Chirurgia fetei',
         route: 'default',
-        image: face,
+        image: chirurgia,
         list: [
             "Facelift deep plane",
             "Mini facelift",

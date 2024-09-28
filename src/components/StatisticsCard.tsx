@@ -10,10 +10,10 @@ export const StatisticsCard = () => {
   const statsRef = useRef(null);
 
   useEffect(() => {
-    const experienceTarget = 7;
-    const patientsTarget = 50;
+    const experienceTarget = 15;
+    const patientsTarget = 1000;
     const doctorsTarget = 2;
-    const proceduresTarget = 80;
+    const proceduresTarget = 10000;
 
     const incrementCounter = (current, target, setter) => {
       if (current < target) {

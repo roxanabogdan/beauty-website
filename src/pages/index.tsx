@@ -9,6 +9,7 @@ import { Rating } from "../components/Rating";
 import { Carousel } from '../components/Carousel';
 import bgimage from '../images/minimal-bg.jpg';
 
+
 const Homopage = () => {
   return <div className="h-full font-merriweather bg-cover bg-center"
   style={{ backgroundImage: `url(${bgimage})` }}

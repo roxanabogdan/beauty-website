@@ -8,45 +8,44 @@ import excizie from '../images/excizie.webp';
 
 const doctors = [
   {
-    title: 'Chirurgia corporala',
+    title: 'Chirurgia corporală',
     image: silueta,
-    description: "Interventiile sunt efectuate in cadrul clinicii Brol dotata cu aparatura moderna, bloc operator la cele mai inalte standarde si saloane in care ingrijirea postoperatorie este asigurata de o linie de garda 24/24 formata din medici specialisti de chirurgie plastica cat si medic anestezist. Protezele mamare utilizate sunt gama Mentor si Motiva , lideri pe piata cu un profil de siguranta ridicat si garantie. Bustierele sau burtierele sunt gama Maam si sunt incluse in pretul interventiei. Lipoaspiratia laser este facuta cu ajutorul echipamentelor de ultima generatie.",
+    description: "Intervențiile sunt efectuate în cadrul clinicii Brol dotată cu aparatură modernă, bloc operator la cele mai înalte standarde și saloane în care îngrijirea postoperatorie este asigurată de o linie de gardă 24/24 formată din medici specialiști de chirurgie plastică, cât și medic anestezist. Protezele mamare utilizate sunt gama Mentor și Motiva, lideri pe piață cu un profil de siguranță ridicat și garanție. Bustierele sau burtierele sunt gama Maam și sunt incluse în prețul intervenției. Lipoaspirația laser este făcută cu ajutorul echipamentelor de ultimă generație.",
     doctors: [
       {
-        name: "Dr. Bloanca Vlad",
+        name: "Dr. Bloancă Vlad",
         cvUrl: '/CurriculumVitaeBloancaVlad.docx',
         photoUrl: vlad
       },
       {
-        name: "Dr. Bloanca-Prodan Mihaela",
+        name: "Dr. Bloancă-Prodan Mihaela",
         cvUrl: '/CurriculumVitaeProdanMihaela.docx',
         photoUrl: mihaela
       }
     ]
   },
   {
-    title: 'Chirurgia fetei',
+    title: 'Chirurgia feței',
     image: botox,
-    description: "In cadrul consultului initial se urmareste conceperea planului de tratament personalizat si armonizarea trasaturilor intr-o maniera in care sa se obtina rezultate naturale si stabile in timp. Absolventi atat ai specializarii de Chirurgie plastica, estetica si microchirurgie reconstructiva cat si a cursurilor la cele mai prestigioase academii din Europa oferim solutii holistice prin combinarea tratamentelor chirurgicale si minim invazive.",
+    description: "În cadrul consultului inițial se urmărește conceperea planului de tratament personalizat și armonizarea trăsăturilor într-o manieră în care să se obțină rezultate naturale și stabile în timp. Absolvenți atât ai specializării de Chirurgie plastică, estetică și microchirurgie reconstructivă cât și ai cursurilor la cele mai prestigioase academii din Europa, oferim soluții holistice prin combinarea tratamentelor chirurgicale și minim invazive.",
     doctors: [
       {
-        name: "Dr. Bloanca-Prodan Mihaela",
+        name: "Dr. Bloancă-Prodan Mihaela",
         cvUrl: '/CurriculumVitaeProdanMihaela.docx',
         photoUrl: mihaela
       },
       {
-        name: "Dr. Bloanca Vlad",
+        name: "Dr. Bloancă Vlad",
         cvUrl: '/CurriculumVitaeBloancaVlad.docx',
         photoUrl: vlad
-      },
+      }
     ]
   },
   {
-    title: 'Chirurgia pielii si a cancerului de piele',
+    title: 'Chirurgia pielii și a cancerului de piele',
     image: excizie,
-    description: "Chirurg plastician cu studii clinice in domeniul cancerului de piele si multiple publicatii in reviste internationale cu factor de impact in tratamentul melanomului malign. Oferim solutii integrate in diagnosticarea precoce cat si tratamentul multidisciplinar al cancerului de piele.",
+    description: "Chirurg plastician cu studii clinice în domeniul cancerului de piele și multiple publicații în reviste internaționale cu factor de impact în tratamentul melanomului malign. Oferim soluții integrate în diagnosticarea precoce cât și tratamentul multidisciplinar al cancerului de piele.",
     doctors: [
-  
       {
         name: "Dr. Bloanca-Prodan Mihaela",
         cvUrl: '/CurriculumVitaeProdanMihaela.docx',
@@ -54,6 +53,7 @@ const doctors = [
       }
     ]
   }
+  
 ];
 
 export const InfoCards = () => {

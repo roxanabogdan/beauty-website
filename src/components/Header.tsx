@@ -9,7 +9,7 @@ export const Header = ({wHomepage = true, wLogo = false}) => {
                 <div className="flex gap-4 p-4 whitespace-nowrap md:text-sm xs:text-xs">
                 {wHomepage &&  
                     <Link to="/">
-                      <span className="hover:text-gray-400">PURE AESTHETIC</span> 
+                      <span className="text-lg hover:text-gray-400">PURE AESTHETIC</span> 
                     </Link>
                     }
                 </div>

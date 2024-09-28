@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import slide1 from '../images/slide3.png';
-import slide2 from '../images/slide4.png';
+import slide2 from '../images/newFont2.png';
 
 export const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
