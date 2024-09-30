@@ -27,10 +27,10 @@ export const ContactForm = () => {
     console.log('form.current', e);
     try {
       await emailjs.sendForm(
-        'service_bltxcse', 
-        'template_rc4v1cp', 
+        'service_x301fjc', 
+        'template_i22nrmn', 
         form.current, 
-        'pz31gQ54K-Ek5pHdE'
+        '_9a96u8R0ads8R2oE'
       );
       console.log('Email successfully sent!');
       alert('Form submitted successfully!');
