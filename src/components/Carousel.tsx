@@ -29,7 +29,7 @@ export const Carousel = () => {
 
     return (
         <div id="default-carousel" className="relative w-full" data-carousel="slide">
-            <div className="relative h-[600px] overflow-hidden rounded-lg xs:h-56 sm:h-[400px] md:h-[600px] xl:h-[740px]">
+            <div className="relative h-[600px] overflow-hidden rounded-lg xs:h-56 sm:h-[400px] md:h-[600px] xl:h-[840px]">
                 {images.map((image, index) => (
                     <div
                         key={index}
