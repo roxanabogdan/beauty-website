@@ -66,7 +66,7 @@ const data = [
     },
     {
         title: 'Chirurgia fetei',
-        route: 'default',
+        route: 'chirurgia-fetei',
         image: chirurgia,
         list: [
             "Facelift deep plane",
@@ -86,7 +86,7 @@ const data = [
     },
     {
         title: 'Chirurgia pielii si al Cancerului de piele',
-        route: 'default',
+        route: 'chirurgia-pielii',
         image: excizie,
         list: [
             "Excizie formatiune tumorala",
