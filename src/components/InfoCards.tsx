@@ -47,7 +47,7 @@ const doctors = [
     description: "Chirurg plastician cu studii clinice în domeniul cancerului de piele și multiple publicații în reviste internaționale cu factor de impact în tratamentul melanomului malign. Oferim soluții integrate în diagnosticarea precoce cât și tratamentul multidisciplinar al cancerului de piele.",
     doctors: [
       {
-        name: "Dr. Bloanca-Prodan Mihaela",
+        name: "Dr. Bloancă-Prodan Mihaela",
         cvUrl: '/CurriculumVitaeProdanMihaela.docx',
         photoUrl: mihaela
       }

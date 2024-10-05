@@ -101,7 +101,7 @@ const data = [
     },
     {
         title: 'Chirurgia mainii',
-        route: 'default',
+        route: 'chirurgia-mainii',
         image: hand,
         list: [
             'Sindrom de tunel carpian',
