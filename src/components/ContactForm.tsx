@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
-//@SMTPClient1
-
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,7 +22,6 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('form.current', e);
     try {
       await emailjs.sendForm(
         'service_x301fjc', 
@@ -32,7 +29,6 @@ export const ContactForm = () => {
         form.current, 
         '_9a96u8R0ads8R2oE'
       );
-      console.log('Email successfully sent!');
       alert('Form submitted successfully!');
       setFormData({
         name: "",
