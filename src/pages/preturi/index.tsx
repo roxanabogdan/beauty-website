@@ -51,7 +51,7 @@ const priceList = {
   ],
   "💉 Injectări Botox": [
     { title: "Injectare Toxină Botulinică 1 zonă", price: "150 EURO" },
-    { title: "Injectare Toxină Botulinică (3 zone)", price: "250-300 EURO" },
+    { title: "Injectare Toxină Botulinică (3 zone)", price: "300 EURO" },
     { title: "Injectare Toxină Botulinică bărbați (3 zone)", price: "300-350 EURO" },
     { title: "Injectare Toxină Botulinică maseter (mandibulă)", price: "300 EURO" },
     { title: "Injectare Toxină Botulinică anti torticolis", price: "300 EURO" },
@@ -60,12 +60,12 @@ const priceList = {
     { title: "Injectare Toxină Botulinică menton", price: "100 EURO" }
   ],
   "💉 Injectări Acid Hialuronic": [
-    { title: "Injectare Acid Hialuronic 1 ml riduri fine", price: "250-300 EURO" },
+    { title: "Injectare Acid Hialuronic 1 ml riduri fine", price: "300 EURO" },
     { title: "Injectare șanțuri nazo-geniene", price: "300 EURO" },
-    { title: "Injectare buze volum / volum natural", price: "250 EURO" },
+    { title: "Injectare buze volum / volum natural", price: "300 EURO" },
     { title: "Injectare Buze tehnica Russian Lips", price: "300 EURO" },
     { title: "Injectare cearcăne cu Acid Hialuronic", price: "350 EURO" },
-    { title: "Injectare pomeți cu Acid Hialuronic", price: "300 EURO" },
+    { title: "Injectare pomeți cu Acid Hialuronic", price: "350 EURO" },
     { title: "Injectare mandibulă (jaw line) cu AH 2 ml", price: "400 EURO" },
     { title: "Hialuronidază - neutralizare AH", price: "150 EURO" }
   ],
