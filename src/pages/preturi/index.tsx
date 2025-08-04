@@ -40,8 +40,8 @@ const priceList = {
     { title: "Lifting gât", price: "2000 EURO" }
   ],
   "💉 Chirurgia Pielii și a Cancerului de Piele": [
-    { title: "Excizie formațiune tumorală", price: "600 RON" },
-    { title: "Excizie formațiune tumorală + biopsie", price: "800 RON" },
+    { title: "Excizie formațiune tumorală", price: "1000 RON" },
+    { title: "Excizie formațiune tumorală + biopsie", price: "1200 RON" },
     { title: "Revizie cicatrici", price: "1000 RON" },
     { title: "Excizie lipom", price: "600-1500 RON" },
     { title: "Excizie formațiune tumorală cu lambou local", price: "1500-2000 RON" },
