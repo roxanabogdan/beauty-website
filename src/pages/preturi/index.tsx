@@ -23,7 +23,7 @@ const priceList = {
   ],
   "💉 Chirurgia Feței": [
     { title: "Blefaroplastie superioară", price: "1200 EURO" },
-    { title: "Blefaroplastie inferioară", price: "1300 EURO" },
+    { title: "Blefaroplastie inferioară", price: "1400 EURO" },
     { title: "Blefaroplastie inferioară + cantopexie (cat eyes)", price: "1500 EURO" },
     { title: "Facelift deep plane", price: "6000 EURO" },
     { title: "Mini facelift", price: "2000 EURO" },
