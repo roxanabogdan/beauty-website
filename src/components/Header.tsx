@@ -43,6 +43,12 @@ export const Header = ({wHomepage = true, wLogo = false}) => {
               </div>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-white to-purple-200 group-hover:w-full transition-all duration-300 rounded-full"></div>
             </Link>
+            <Link to="/blog" className="group relative">
+              <div className="text-purple-100 hover:text-white transition-all duration-300 font-semibold tracking-wide">
+                BLOG
+              </div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-white to-purple-200 group-hover:w-full transition-all duration-300 rounded-full"></div>
+            </Link>
             <Link
               to="tel:+40727784478"
               className="bg-gradient-to-r from-white to-purple-100 text-slate-800 px-4 py-2 rounded-full font-bold hover:from-purple-100 hover:to-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
