@@ -48,29 +48,7 @@ const config: GatsbyConfig = {
       options: {
         output: '/sitemap',
         excludes: ['/dev-404-page/', '/404/', '/404.html'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-          }
-        `,
         resolveSiteUrl: () => 'https://www.pureaesthetic.ro',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map(node => {
-            return {
-              url: `${site.siteMetadata.siteUrl}${node.path}`,
-              changefreq: 'weekly',
-              priority: 0.7,
-            }
-          })
       }
     },
     {
