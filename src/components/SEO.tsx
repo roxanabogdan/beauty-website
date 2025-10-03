@@ -1,5 +1,4 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
 interface SEOProps {
   title?: string;
@@ -18,37 +17,16 @@ export const SEO: React.FC<SEOProps> = ({
   article = false,
   keywords,
 }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            keywords
-            author
-            siteUrl
-            image
-            twitterUsername
-            lang
-            locale
-          }
-        }
-      }
-    `
-  );
-
-  const {
-    title: defaultTitle,
-    description: defaultDescription,
-    keywords: defaultKeywords,
-    author,
-    siteUrl,
-    image: defaultImage,
-    twitterUsername,
-    lang,
-    locale,
-  } = site.siteMetadata;
+  // Static site metadata - no GraphQL query needed
+  const defaultTitle = "Pure Aesthetic - Clinică de Chirurgie Plastică și Estetică";
+  const defaultDescription = "Clinică de chirurgie plastică, oculoplastică, estetică și chirurgia mâinii în Timișoara. Peste 15 ani de experiență în domeniu cu proceduri personalizate și tratamente de calitate.";
+  const defaultKeywords = "chirurgie plastică, chirurgie estetică, Timișoara, botox, acid hialuronic, blefaroplastie, lifting, liposucție, chirurgie mâinii, proceduri estetice";
+  const author = "Pure Aesthetic Clinic";
+  const siteUrl = "https://www.pureaesthetic.ro";
+  const defaultImage = "/src/images/purelogo.png";
+  const twitterUsername = "@pureaesthetic";
+  const lang = "ro";
+  const locale = "ro_RO";
 
   const seo = {
     title: title || defaultTitle,
