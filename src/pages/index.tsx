@@ -1,12 +1,13 @@
 import React from "react"
 import { Header } from "../components/Header";
-import { StatisticsCard } from '../components/StatisticsCard'
-import { Footer } from '../components/Footer';
+import { StatisticsCard } from "../components/StatisticsCard";
+import { Footer } from "../components/Footer";
 import { Card } from "../components/Card";
-import { ContactCard } from '../components/Contact';
+import { ContactCard } from "../components/Contact";
 import { Rating } from "../components/Rating";
-import { Carousel } from '../components/Carousel';
-import bgimage from '../images/minimal-bg.jpg';
+import { Carousel } from "../components/Carousel";
+import { SEO } from "../components/SEO";
+import bgimage from "../images/minimal-bg.jpg";
 
 const Homopage = () => {
   return (
@@ -51,6 +52,14 @@ const Homopage = () => {
       <Footer />
     </div>
   );
-}
+};
+
+export const Head = () => (
+  <SEO
+    title="Acasă"
+    description="Clinică de chirurgie plastică, oculoplastică, estetică și chirurgia mâinii în Timișoara. Peste 15 ani de experiență în domeniu cu proceduri personalizate și tratamente de calitate."
+    keywords="chirurgie plastică, chirurgie estetică, Timișoara, botox, acid hialuronic, blefaroplastie, lifting, liposucție, chirurgie mâinii, proceduri estetice"
+  />
+);
 
 export default Homopage

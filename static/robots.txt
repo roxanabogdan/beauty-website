@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.pureaesthetic.ro/sitemap-index.xml
+
+# Allow all pages for better SEO
+Allow: /despre/
+Allow: /preturi/
+Allow: /rezultate/
+
+# Crawl delay (optional - helps prevent overloading server)
+Crawl-delay: 1
