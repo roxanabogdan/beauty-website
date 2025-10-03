@@ -36,46 +36,67 @@ const faqData = [
   ]
   
 export const FAQ = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const toggleQuestion = (index) => {
+    const toggleQuestion = (index: number) => {
       setActiveIndex(activeIndex === index ? null : index);
     };
-  
+
     return (
-      <div className="max-w-3xl mx-auto p-6 bg-white shadow-md mb-5 bg-gradient-to-tr from-gray-600 items-center to-fuchsia-950">
-        <h1 className="text-xl font-bold mb-6 xs:text-md text-white">Întrebări frecvente</h1>
-        {faqData.map((item, index) => (
-          <div key={index} className="mb-4 border-b border-gray-200">
-            <button
-              onClick={() => toggleQuestion(index)}
-              className="w-full text-left p-2 flex items-center justify-between bg-gray-100 focus:outline-none"
+      <div className="max-w-4xl mx-auto p-8 bg-gradient-to-br from-purple-800/80 via-purple-700/70 to-slate-900/90 backdrop-blur-md border border-purple-500/20 rounded-2xl shadow-2xl mb-8 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-gradient-to-tl from-purple-600/10 to-slate-800/15 rounded-2xl"></div>
+        <div
+          className="absolute inset-0 opacity-20 blur-sm"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+
+        <div className="relative z-10">
+          <h1 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent drop-shadow-lg">
+            Întrebări frecvente
+          </h1>
+
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className="mb-4 border-b border-purple-300/30 last:border-b-0"
             >
-              <span className="font-semibold text-lg">{item.question}</span>
-              <svg
-                className={`w-6 h-6 transition-transform duration-300 ${
-                  activeIndex === index ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                onClick={() => toggleQuestion(index)}
+                className="w-full text-left p-4 flex items-center justify-between bg-white/10 backdrop-blur-sm hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-purple-400/50 rounded-lg transition-all duration-300 group"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {activeIndex === index && (
-              <div className="p-4 bg-gray-50">
-                <p>{item.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
+                <span className="font-semibold text-lg text-purple-100 group-hover:text-white transition-colors duration-300 pr-4">
+                  {item.question}
+                </span>
+                <svg
+                  className={`w-6 h-6 transition-transform duration-300 text-purple-200 group-hover:text-white ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {activeIndex === index && (
+                <div className="p-4 bg-white/5 backdrop-blur-sm rounded-lg mt-2 border border-purple-300/20">
+                  <p className="text-purple-100/90 leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     );
   };

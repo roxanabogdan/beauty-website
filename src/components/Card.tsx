@@ -116,35 +116,77 @@ const data = [
 
 export const Card = () => {
     return (
-        <div className="flex flex-wrap justify-center gap-6 p-5 cursor-pointer">
-            {data.map((item, index) => (
-                <a key={index}  href={`/rezultate?galerie=${item.route}`}
-                    className="max-w-sm w-full flex flex-col border bg-gradient-to-t from-gray-600 to-fuchsia-950 border-gray-200 rounded-lg shadow min-h-[400px] transition-transform duration-300 hover:scale-105">
-                    <div className="p-3">
-                        <div
-                            style={{ backgroundImage: `url(${item.image})` }}
-                            className="bg-cover bg-center h-48 w-full rounded-md mb-3"
-                            alt={item.title} // Use title for alt text
-                        />                        
-                        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-200 dark:text-white">
-                            {item.title}
-                        </h5>
-                        <ul className="mb-3 font-normal md:text-lg xs:text-sm text-white list-disc pl-5 flex-grow">
-                            {item.list.map((listItem, listIndex) => (
-                                <li key={listIndex}>{listItem}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="mt-auto flex justify-end p-3">
-                        <div className="inline-flex items-center font-medium text-white border border-white text-sm py-2 px-4 rounded-3xl hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none">
-                            Vezi rezultate pre/post-operator
-                            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            ))}
-        </div>
+      <div className="flex flex-wrap justify-center gap-8 p-8 cursor-pointer">
+        {data.map((item, index) => (
+          <a
+            key={index}
+            href={`/rezultate?galerie=${item.route}`}
+            className="max-w-sm w-full flex flex-col bg-gradient-to-br from-purple-800/80 via-purple-700/70 to-slate-900/90 backdrop-blur-md border border-purple-500/20 rounded-2xl shadow-2xl min-h-[450px] transition-all duration-500 hover:scale-105 hover:-translate-y-2 group relative overflow-hidden"
+          >
+            {/* Subtle background pattern with reduced intensity */}
+            <div className="absolute inset-0 bg-gradient-to-tl from-purple-600/10 to-slate-800/15 rounded-2xl"></div>
+            <div
+              className="absolute inset-0 opacity-20 blur-sm"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}
+            ></div>
+
+            <div className="relative z-10 p-6">
+              <div className="relative overflow-hidden rounded-xl mb-4 shadow-lg group-hover:shadow-xl transition-all duration-500">
+                <div
+                  style={{ backgroundImage: `url(${item.image})` }}
+                  className="bg-cover bg-center h-56 w-full transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                  title={item.title}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                    <p className="text-sm text-slate-700 font-medium">
+                      Vezi rezultate →
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h5 className="mb-4 text-2xl font-bold tracking-tight text-white group-hover:text-purple-200 transition-colors duration-300 drop-shadow-sm">
+                {item.title}
+              </h5>
+
+              <ul className="mb-6 font-normal text-base text-purple-100/90 list-disc pl-5 flex-grow space-y-1">
+                {item.list.map((listItem, listIndex) => (
+                  <li
+                    key={listIndex}
+                    className="hover:text-white transition-colors duration-200 leading-relaxed"
+                  >
+                    {listItem}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative z-10 mt-auto flex justify-end p-6">
+              <div className="bg-gradient-to-r from-white/95 to-slate-200/95 text-slate-800 px-4 py-2 rounded-full font-bold hover:from-slate-100 hover:to-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm flex items-center gap-2 backdrop-blur-sm">
+                Vezi rezultate pre/post-operator
+                <svg
+                  className="rtl:rotate-180 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
     );
 };

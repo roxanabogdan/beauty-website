@@ -12,7 +12,9 @@ export const ContactForm = () => {
 
   const form = useRef();
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -20,16 +22,16 @@ export const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       await emailjs.sendForm(
-        'service_x301fjc', 
-        'template_i22nrmn', 
-        form.current, 
-        '_9a96u8R0ads8R2oE'
+        "service_x301fjc",
+        "template_i22nrmn",
+        form.current,
+        "_9a96u8R0ads8R2oE"
       );
-      alert('Form submitted successfully!');
+      alert("Form submitted successfully!");
       setFormData({
         name: "",
         email: "",
@@ -38,77 +40,99 @@ export const ContactForm = () => {
         description: "",
       });
     } catch (error) {
-      console.error('There was an error sending the email:', error);
-      alert('Failed to send the form. Please try again.');
+      console.error("There was an error sending the email:", error);
+      alert("Failed to send the form. Please try again.");
     }
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit} className="max-w-md mx-auto text-sm font-roboto p-4 bg-white shadow-md rounded-lg">
-      <label htmlFor="form" className="block text-gray-700 mb-2">
-        Completează formularul în vederea programării unui consult sau tratament și noi te vom contacta telefonic pentru confirmare.
-      </label>
-      <div className="mb-4">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nume si Prenume"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-3 py-2 text-gray-900 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          required
-        />
+    <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+      <p className="text-gray-600 text-sm leading-relaxed">
+        Completează formularul în vederea programării unui consult sau tratament
+        și noi te vom contacta telefonic pentru confirmare.
+      </p>
+
+      <div className="space-y-4">
+        <div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nume și Prenume"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 shadow-inner-3d hover:shadow-3d"
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresă de Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 shadow-inner-3d hover:shadow-3d"
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Număr de telefon"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 shadow-inner-3d hover:shadow-3d"
+            required
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="date"
+            className="block text-gray-700 text-sm font-medium mb-2"
+          >
+            Data și ora dorită:
+          </label>
+          <input
+            type="datetime-local"
+            id="date"
+            name="date"
+            value={formData.date}
+            min={new Date().toISOString().slice(0, 16)}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 shadow-inner-3d hover:shadow-3d"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="description"
+            className="block text-gray-700 text-sm font-medium mb-2"
+          >
+            Alte precizări:
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            rows={4}
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-none shadow-inner-3d hover:shadow-3d"
+            placeholder="Descrie procedura dorită sau alte detalii importante..."
+            required
+          />
+        </div>
       </div>
-      <div className="mb-4">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Adresă de Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          required
-        />
-      </div>
-      <div className="mb-4">
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Numar de telefon"
-          value={formData.phone}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          required
-        />
-      </div>
-      <div className="mb-4">
-        <input
-          type="datetime-local"
-          id="date"
-          name="date"
-          value={formData.date}
-          min={new Date().toISOString().slice(0, 16)} 
-          onChange={handleChange}
-          className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="description" className="block text-gray-700 mb-2">Alte precizări:</label>
-        <textarea
-          id="description"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border text-gray-900 rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          required
-        />
-      </div>
+
       <button
         type="submit"
-        className="w-full bg-gradient-to-tr from-gray-600 to-fuchsia-950 border-gray-200 text-white text-lg py-4 px-6 rounded-3xl hover:bg-fuchsia-900 transition duration-200"
+        className="w-full text-white rounded-full bg-gradient-to-r from-purple-500 to-slate-900 text-lg py-4 font-bold hover:animate-pulse-3d"
       >
         Programează-te
       </button>

@@ -2,3 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased bg-gray-50;
+    }
+}
+
+@layer components {
+    .glass-3d {
+        @apply bg-white/90 backdrop-blur-sm border border-gray-200/50 shadow-3d;
+    }
+
+    .glass-3d-dark {
+        @apply bg-white/95 backdrop-blur-sm border border-purple-200/30 shadow-3d-lg;
+    }
+
+    .gradient-3d {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .text-gradient {
+        @apply bg-gradient-to-r from-purple-600 to-lavender-600 bg-clip-text text-transparent;
+    }
+
+    .text-gradient-light {
+        @apply bg-gradient-to-r from-purple-500 to-lavender-500 bg-clip-text text-transparent;
+    }
+
+    .card-3d {
+        @apply bg-white rounded-2xl shadow-3d-lg border border-gray-100 hover:shadow-3d-xl hover:-translate-y-2 transition-all duration-500;
+        transform-style: preserve-3d;
+    }
+
+    .card-3d-hover {
+        @apply hover:scale-105 hover:rotate-1 transition-all duration-300;
+        transform-style: preserve-3d;
+    }
+
+    .btn-3d {
+        @apply bg-gradient-to-r from-purple-800 via-purple-700 to-slate-900 border-b border-purple-500/30 text-white px-6 py-3 rounded-full font-semibold shadow-3d hover:shadow-purple-3d hover:scale-105 hover:-translate-y-1 transition-all duration-300;
+        transform-style: preserve-3d;
+    }
+
+    .floating-3d {
+        @apply animate-float-3d;
+        transform-style: preserve-3d;
+    }
+
+    .perspective-container {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    .depth-layer-1 {
+        transform: translateZ(10px);
+    }
+
+    .depth-layer-2 {
+        transform: translateZ(20px);
+    }
+
+    .depth-layer-3 {
+        transform: translateZ(30px);
+    }
+}
