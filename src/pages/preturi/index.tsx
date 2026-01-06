@@ -88,7 +88,7 @@ const priceList = {
     { title: "Injectare Buze tehnica Russian Lips", price: "300 EURO" },
     { title: "Injectare cearcăne cu Acid Hialuronic", price: "350 EURO" },
     { title: "Injectare pomeți cu Acid Hialuronic", price: "350 EURO" },
-    { title: "Injectare mandibulă (jaw line) cu AH 2 ml", price: "400 EURO" },
+    { title: "Injectare mandibulă (jaw line) cu AH 2 ml", price: "600 EURO" },
     { title: "Hialuronidază - neutralizare AH", price: "150 EURO" },
   ],
   "💉 Lifting Nechirurgical": [
