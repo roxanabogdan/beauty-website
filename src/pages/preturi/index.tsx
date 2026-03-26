@@ -7,33 +7,42 @@ import { SEO } from "../../components/SEO";
 
 const priceList = {
   "": [{ title: "🩺 Consultație", price: "250 RON" }],
+
   "💉 Chirurgia Corporală": [
     { title: "Mărire sâni cu implant mamar", price: "4500-5500 EURO" },
-    {
-      title: "Ridicare sâni (Mastopexie) fără proteze",
-      price: "4500-5500 EURO",
-    },
     { title: "Ridicare sâni (Mastopexie) cu proteze", price: "5500-7000 EURO" },
-    { title: "Abdominoplastie", price: "4500-5500 EURO" },
-    { title: "Mini-abdominoplastie", price: "2800-3500 EURO" },
-    { title: "Lipoaspirație", price: "1500-4000 EURO (3 ZONE)" },
-    { title: "Labioplastie", price: "1500 EURO" },
-    { title: "Ginecomastie", price: "2800-3500 EURO" },
-    { title: "Lifting de brațe", price: "2500-3500 EURO" },
-    { title: "Lifting de coapse", price: "3000-4500 EURO" },
+    { title: "Mamopexie (ridicare sâni)", price: "5000-6000 EURO" },
+    {
+      title: "Mamoreducție (ridicare + micșorare sâni)",
+      price: "5000-6000 EURO",
+    },
+    { title: "Gigantomastie", price: "5000-6000 EURO" },
+    { title: "Mărire sâni cu proteze", price: "6000-6500 EURO" },
+    {
+      title: "Mărire sâni cu ridicare + proteze",
+      price: "6500-7500 EURO",
+    },
+    { title: "Abdominoplastie", price: "5000-7000 EURO" }, // UPDATED
+    { title: "Mini-abdominoplastie", price: "3000 EURO" }, // UPDATED
+    { title: "Lipoaspirație", price: "2000-4000 EURO" }, // UPDATED
+    { title: "Labioplastie", price: "1200 EURO" }, // UPDATED
+    { title: "Ginecomastie", price: "3000-5000 EURO" }, // UPDATED
+    { title: "Lifting de brațe", price: "2500-3000 EURO" }, // UPDATED
+    { title: "Lifting de coapse", price: "3000-5000 EURO" }, // UPDATED
   ],
+
   "💉 Chirurgia Feței": [
-    { title: "Blefaroplastie superioară", price: "1200 EURO" },
-    { title: "Blefaroplastie inferioară", price: "1400 EURO" },
+    { title: "Blefaroplastie superioară", price: "6500 RON" }, // UPDATED
+    { title: "Blefaroplastie inferioară", price: "7500 RON" }, // UPDATED
     {
       title: "Blefaroplastie inferioară + cantopexie (cat eyes)",
       price: "1500 EURO",
     },
     { title: "Facelift deep plane", price: "6000 EURO" },
-    { title: "Mini facelift", price: "2000 EURO" },
-    { title: "Lifting buze", price: "1400 EURO" },
-    { title: "Lifting sprâncene", price: "1000 EURO" },
-    { title: "Corecție lob auricular (bilateral)", price: "300 EURO" },
+    { title: "Mini facelift", price: "15000 RON" }, // UPDATED
+    { title: "Lifting buze", price: "5500 RON" }, // UPDATED
+    { title: "Lifting sprâncene", price: "6000 RON" }, // UPDATED
+    { title: "Corecție lob auricular (bilateral)", price: "1500 RON" }, // UPDATED
     {
       title: "Lipofilling full face cu grăsime proprie cu anestezie locală",
       price: "1000 EURO",
@@ -49,19 +58,21 @@ const priceList = {
     { title: "Lipoaspirație gușă cu anestezie totală", price: "1300 EURO" },
     { title: "Lifting gât", price: "2000 EURO" },
   ],
+
   "💉 Chirurgia Pielii și a Cancerului de Piele": [
     { title: "Excizie formațiune tumorală", price: "1000 RON" },
-    { title: "Excizie formațiune tumorală + biopsie", price: "1200 RON" },
-    { title: "Revizie cicatrici", price: "1000 RON" },
-    { title: "Excizie lipom", price: "600-1500 RON" },
+    { title: "Excizie formațiune tumorală + biopsie", price: "1300 RON" }, // UPDATED
+    { title: "Revizie cicatrici", price: "1600 RON" }, // UPDATED
+    { title: "Excizie lipom", price: "800-1000 RON" }, // UPDATED
     {
       title: "Excizie formațiune tumorală cu lambou local",
-      price: "1500-2000 RON",
+      price: "2500 RON", // UPDATED
     },
     { title: "Excizie xantelasmă", price: "1000 RON" },
     { title: "Suprimare fire de sutură", price: "80 RON" },
     { title: "Pansament", price: "100 RON" },
   ],
+
   "💉 Injectări Botox": [
     { title: "Injectare Toxină Botulinică 1 zonă", price: "150 EURO" },
     { title: "Injectare Toxină Botulinică (3 zone)", price: "300 EURO" },
@@ -81,6 +92,7 @@ const priceList = {
     },
     { title: "Injectare Toxină Botulinică menton", price: "100 EURO" },
   ],
+
   "💉 Injectări Acid Hialuronic": [
     { title: "Injectare Acid Hialuronic 1 ml riduri fine", price: "300 EURO" },
     { title: "Injectare șanțuri nazo-geniene", price: "300 EURO" },
@@ -88,25 +100,30 @@ const priceList = {
     { title: "Injectare Buze tehnica Russian Lips", price: "300 EURO" },
     { title: "Injectare cearcăne cu Acid Hialuronic", price: "350 EURO" },
     { title: "Injectare pomeți cu Acid Hialuronic", price: "350 EURO" },
-    { title: "Injectare mandibulă (jaw line) cu AH 2 ml", price: "600 EURO" },
-    { title: "Hialuronidază - neutralizare AH", price: "150 EURO" },
+    { title: "Injectare mandibulă (jaw line) cu AH 2 ml", price: "500 EURO" }, // UPDATED
+    { title: "Hialuronidază - neutralizare AH", price: "200 EURO" }, // UPDATED
+    { title: "Injectare Acid Hialuronic Juvederm 0.5 ml", price: "200 EURO" }, // NEW
   ],
+
   "💉 Lifting Nechirurgical": [
     { title: "Fire PDO Anchor", price: "100 EURO/FIR" },
     { title: "Pachet lifting fire PDO 6 buc", price: "550 EURO" },
   ],
+
   "💉 Tratamentul Cicatricilor": [
     {
       title: "Volon - tratament injectabil pentru cicatrici Cheloide",
-      price: "100 EURO/ședință",
+      price: "150 EURO/ședință", // UPDATED
     },
   ],
+
   "💉 Biostimulatoare de Colagen": [
     { title: "Tratament SCULPTRA", price: "500 EURO" },
     { title: "Tratament HarmoniCA", price: "350 EURO" },
     { title: "Tratament Prophilo", price: "400 EURO" },
-    { title: "Lipoliză injectabilă", price: "100 EURO/ședință" },
+    { title: "Lipoliză injectabilă", price: "100 EURO/zonă" }, // UPDATED
   ],
+
   "💉 Skinbooster": [
     { title: "Injectare pleoape cu Phillart", price: "200 EURO" },
     { title: "Skinbooster full face", price: "80 EURO" },
