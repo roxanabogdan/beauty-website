@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer";
 import { SEO } from "../../components/SEO";
 
 const priceList = {
-  "": [{ title: "🩺 Consultație", price: "250 RON" }],
+  "": [{ title: "🩺 Consultație", price: "350 RON" }],
 
   "💉 Chirurgia Corporală": [
     { title: "Mărire sâni cu implant mamar", price: "4500-5500 EURO" },
@@ -54,8 +54,8 @@ const priceList = {
     { title: "Rinoplastie", price: "3800 EURO" },
     { title: "Otoplastie cu anestezie totală", price: "1800 EURO" },
     { title: "Otoplastie cu anestezie locală", price: "1300 EURO" },
-    { title: "Lipoaspirație gușă cu anestezie locală", price: "800 EURO" },
-    { title: "Lipoaspirație gușă cu anestezie totală", price: "1300 EURO" },
+    { title: "Lipoaspirație gușă cu anestezie locală", price: "1200 EURO" },
+    { title: "Lipoaspirație gușă cu anestezie totală", price: "1800 EURO" },
     { title: "Lifting gât", price: "2000 EURO" },
   ],
 
